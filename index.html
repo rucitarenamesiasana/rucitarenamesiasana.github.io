@@ -3,190 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rucita Rena Mesiasana - Portfolio</title>
+    <title>Video di Background</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+        .vidbg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to right, rgba(64,255,77,0.312), rgba(45,76,255,0.31));
+            color: rgba(255, 255, 255, 0.412);
+            position: relative;
+            min-height: 100vh;
+            font-size: 3em;
+            overflow: hidden;
+        }
+        /* overflow hidden itu untuk menghilangkan kursor di bag bawah */
+        /* tampilannya jadi fleksibel, !HARUS! ada bantuan justify content dan align items */
 
-    <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        .videobg{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            min-height: 100%;
+            min-width: 100%;
+            z-index: -1;
+        }
+        /* z index untuk background videony jd diblkg dan teks di depan */
+        /* absolute untuk stay, ga bakal pindah. !HARUS! dibarengi dengan bottom 0 left 0 */
+    </style>
 </head>
 <body>
-    <!-- Header/Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">R2M Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li> <!-- Tambahan -->
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- JUMBOTRON -->
-    <!-- section class agar semuanya dapat berubah sesuai dengan jumbotron ini -->
-    <!-- text-center untuk tulisan ditengah (text alignment) -->
-    <div class="jumbotron text-center">
-        <img src="Gambar/pp.png" alt="Rucita Rena Mesiasana" class="rounded-circle img-thumbnail mb-4" width="350">
-        <h1 class="display-4">Rucita Rena Mesiasana</h1>
-        <p class="lead">I am a student majoring in Information Systems in UPH Medan.</p>
-        <!-- pakai getwaves.io -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,0L40,16C80,32,160,64,240,69.3C320,75,400,53,480,69.3C560,85,640,139,720,176C800,213,880,235,960,250.7C1040,267,1120,277,1200,256C1280,235,1360,181,1400,154.7L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
-      </div>
-    </section>
-
-    <!-- end JUMBOTRON -->
-
-    <!-- About Section -->
-    <section id="about" class="about bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">About Me</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <p>I have extensive experience as an educator, having taught music, basic English, and Mandarin at Brigjend Katamso 1, Medan. I have also led and managed teams during my active participation in OSIS as Secretary and Treasurer. These roles have honed my leadership, adaptability, and communication skills.</p>
-                </div>
-                <div class="col-md-6">
-                    <p>In addition to education, I have achieved notable awards, such as winning the Stand-Up Comedy competition and securing third place in the Biology Olympiad. These accomplishments showcase my diverse skills and determination to excel in various fields.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portofolio -->
-    <section id="portofolio">
-        <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col">
-                    <h2>Portofolio</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-5 ">
-                    <div class="card" style="width: 18rem;">
-                        <img src="Gambar/music app.jpeg" class="card-img-top" alt="poroject-1">
-                        <div class="card-body">
-                          <h5 class="card-title">Music Teaching App</h5>
-                          <p class="card-text">An interactive application designed to teach children basic music theory in an engaging way.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card" style="width: 18rem;">
-                        <img src="Gambar/Biology.png" class="card-img-top" alt="poroject-1">
-                        <div class="card-body">
-                          <h5 class="card-title">Biology Quiz Portal</h5>
-                          <p class="card-text"> A web-based platform for students and educators to explore biology topics through interactive quizzes.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card" style="width: 18rem;">
-                        <img src="Gambar/std-up-comedy.jpg" class= "card-img-top" alt="poroject-1">
-                        <div class="card-body">
-                          <h5 class="card-title">Stand-Up Comedy Blog</h5>
-                          <p class="card-text"> personal blog documenting my journey and tips in stand-up comedy.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card" style="width: 18rem;">
-                        <img src="Gambar/Language+Learning.jpg" class="card-img-top" alt="poroject-1">
-                        <div class="card-body">
-                          <h5 class="card-title">Language Learning Tool</h5>
-                          <p class="card-text">A comprehensive tool designed to teach basic Mandarin and English to young learners.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card" style="width: 18rem;">
-                        <img src="Gambar/workshop.jpg" class="card-img-top" alt="poroject-1">
-                        <div class="card-body">
-                          <h5 class="card-title">Educational Workshop Platform</h5>
-                          <p class="card-text">Educators and learners through virtual workshops and webinars.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,0L40,16C80,32,160,64,240,69.3C320,75,400,53,480,69.3C560,85,640,139,720,176C800,213,880,235,960,250.7C1040,267,1120,277,1200,256C1280,235,1360,181,1400,154.7L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
-
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Skills</h2>
-            <div class="row text-center">
-                <div class="col-md-4"><h5>Teaching</h5></div>
-                <div class="col-md-4"><h5>Leadership</h5></div>
-                <div class="col-md-4"><h5>Adaptability</h5></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-<section id="education" class="education py-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Education</h2>
-        <ul class="list-group">
-            <li class="list-group-item">TK Anak Bangsa, Jakarta</li>
-            <li class="list-group-item">TK Rhema Indonesia, Jakarta</li>
-            <li class="list-group-item">SD Maria Fransiska, Bekasi</li>
-            <li class="list-group-item">SD Budi Murni, Medan</li>
-            <li class="list-group-item">SD Bangun Insan Mandiri, Medan</li>
-            <li class="list-group-item">SD Baptis, Palembang</li>
-            <li class="list-group-item">SMP Sariputra, Padangsidimpuan</li>
-            <li class="list-group-item">SMA Kesuma Indah, Padangsidimpuan</li>
-            <li class="list-group-item">SMA Methodist 2, Medan</li>
-            <li class="list-group-item">Universitas Pelita Harapan, Medan</li>
-        </ul>
+    <div class="vidbg">
+        <!-- untuk controlsnya hilang, pake autoplay muted aja -->
+        <video class="videobg" src="LP.mp4" autoplay muted loop></video> 
     </div>
-</section>
 
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Me</h2>
-            <form>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control" id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-success">Send</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center bg-success text-white py-3">
-        <p>&copy; 2024 Rucita Rena Mesiasana | All Rights Reserved</p>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        //pindah ke halaman lain selama 10 detik//
+        setTimeout(function(){
+            window.location.href="index1.html"; //akan pindah ke index2.html//
+        }, 5000); //satuannya milisecond//
+    </script>
 </body>
 </html>
